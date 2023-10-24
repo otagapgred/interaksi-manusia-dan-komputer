@@ -1,0 +1,330 @@
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Merriweather", sans-serif;
+  background-color: var(--bg);
+  color: azure;
+  
+}
+
+/* Navbar */
+.navbar {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #6d4f31;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .profil {
+  display: inline-flex;
+  width: 1cm;
+  height: 1cm;
+  margin-right: 1.5cm;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: antiquewhite;
+  font-style: italic;
+  margin-left: 1rem;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.navbar .navbar-nav a {
+  color: aliceblue;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: aliceblue;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+#menu-pan {
+  display: inline-block;
+}
+.navbar .navbar-nav {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  background-color: aliceblue;
+  width: 20rem;
+  height: 100vh;
+  transition: 0.3s;
+}
+.navbar .navbar-nav.active {
+  right: 0;
+}
+.navbar .navbar-nav a {
+  color: var(--bg);
+  display: block;
+  margin: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+.navbar .navbar-nav a::after {
+  transform-origin: 0;
+}
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.2);
+}
+
+/* Hero section*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero::after {
+  contain: "";
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 10%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 90rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hero .content h1 {
+  font-size: 2.5em;
+  color: aliceblue;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.1;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content .soal1,
+.soal2,
+.soal3,
+.soal4,
+.soal5 {
+  margin-top: 2rem;
+  display: block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: aliceblue;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/*Answer Section*/
+.answer,
+.menu {
+  padding: 8rem 7% 1.4rem;
+}
+
+.answer h1,
+.anggota h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3.5rem;
+}
+
+.answer h1 span,
+.anggota h2 span {
+  color: var(--primary);
+}
+
+.answer .row {
+  display: flex;
+}
+
+.answer .row .answer-img {
+  flex: 1 1 45rem;
+}
+
+.answer .row .answer-img img {
+  width: 100%;
+}
+
+.answer .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+.answer .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.answer .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 80;
+  line-height: 1.6;
+}
+
+/*Menu Section*/
+
+.anggota .row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.anggota-card, .menu .row{
+  text-align: center;
+}
+.anggota-card, .menu .row img{
+  width: 80%;
+
+}
+
+.anggota .row .anggota-card .anggota-card-title{
+  margin: 1.5rem auto 1rem;
+}
+
+
+
+
+/* Display Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+/* Display Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+  #menu-pan {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: aliceblue;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+  .answer .row {
+    flex-wrap: wrap;
+  }
+
+  .answer .row .answer-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .answer .row .content {
+    padding: 0;
+  }
+
+  .answer .row .content h3 {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+/* Display Smartphone */
+@media (max-width: 450px) {
+  html {
+    font-size: 40%;
+  }
+}
