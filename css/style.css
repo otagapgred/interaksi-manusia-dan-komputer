@@ -1,5 +1,5 @@
 :root {
-  --primary: #b6895b;
+  --primary: #5b70b6;
   --bg: #010101;
 }
 
@@ -26,7 +26,7 @@ body {
   align-items: center;
   padding: 1.4rem 7%;
   background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 1px solid #6d4f31;
+  border-bottom: 1px solid #2f62bf;
   position: fixed;
   top: 0;
   left: 0;
@@ -34,12 +34,6 @@ body {
   z-index: 9999;
 }
 
-.navbar .profil {
-  display: inline-flex;
-  width: 1cm;
-  height: 1cm;
-  margin-right: 1.5cm;
-}
 
 .navbar .navbar-logo {
   font-size: 2rem;
@@ -141,8 +135,9 @@ body {
 }
 
 .hero .content {
-  padding: 1.4rem 7%;
-  max-width: 90rem;
+  text-align: center;
+  padding: 1rem 33%;
+  max-width: 200rem;
 }
 
 * {
